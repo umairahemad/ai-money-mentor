@@ -56,7 +56,7 @@ Frontend (UI) → FastAPI Backend → Financial Logic + LLM → Response → UI
 
 ### 1. Clone Repository
 
-git clone [https://github.com/your-username/ai-money-mentor.git](https://github.com/your-username/ai-money-mentor.git)
+git clone [https://github.com/umairahemad/ai-money-mentor.git](https://github.com/umairahemad/ai-money-mentor.git)
 
 ### 2. Install Dependencies
 
