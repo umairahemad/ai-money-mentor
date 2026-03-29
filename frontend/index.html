@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Money Mentor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h2>AI <span style="color:red;">Money Mentor</span></h2>
+</header>
+
+<div class="container">
+
+  <ul class="sidebar">
+    <li onclick="loadModule('fire', event)">🔥 FIRE</li>
+    <li onclick="loadModule('tax', event)">⚖️ Tax</li>
+    <li onclick="loadModule('portfolio', event)">📊 Portfolio</li>
+    <li onclick="loadModule('couple', event)">👫 Couple</li>
+    <li onclick="loadModule('life', event)">📅 Life</li>
+    <li onclick="loadModule('health', event)">🏥 Health</li>
+  </ul>
+
+  <div id="main"></div>
+
+  <div class="right">
+
+  <h3>📊 Financial Dashboard</h3>
+
+  <!-- KPI CARDS -->
+  <div class="result-grid">
+    <div class="result-card">
+      <p id="label1">Main Value</p>
+      <h2 id="val1">-</h2>
+
+<p id="label2">Secondary Value</p>
+<h2 id="val2">-</h2>
+    </div>
+
+    <div class="result-card green">
+      <p id="label1">Main Value</p>
+      <h2 id="val1">-</h2>
+    </div>
+  </div>
+
+  <!-- HEALTH BAR -->
+  <div class="card">
+    <p>Financial Score</p>
+    <div class="progress-bar">
+      <div id="scoreFill"></div>
+    </div>
+  </div>
+
+  <!-- INSIGHT -->
+  <div class="card note" id="note">
+    AI insights will appear here...
+  </div>
+
+  <!-- CHAT -->
+  <div class="card">
+    <h3>🤖 AI Assistant</h3>
+    <input id="chatInput" placeholder="Ask about money...">
+    <button onclick="sendChat()">Ask AI</button>
+    <div id="chatReply" class="chat-reply"></div>
+  </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

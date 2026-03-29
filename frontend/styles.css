@@ -1,0 +1,225 @@
+:root {
+  --primary: #ed1c24;
+  --bg: #f5f7f9;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --border: #e2e8f0;
+}
+
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+header {
+  background: #fff;
+  padding: 15px 30px;
+  border-bottom: 2px solid var(--primary);
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: #fff;
+  border-right: 1px solid var(--border);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background: #fff1f1;
+  color: var(--primary);
+}
+
+.sidebar li.active {
+  background: #ffe5e5;
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+}
+
+/* MAIN */
+#main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* CARD */
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* INPUT */
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* BUTTON */
+button {
+  padding: 12px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background: var(--primary);
+}
+
+/* RIGHT PANEL */
+.right {
+  width: 320px;
+  background: #fff;
+  border-left: 1px solid var(--border);
+  padding: 25px;
+}
+
+/* RESULT */
+.value {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.green {
+  color: #16a34a;
+}
+
+/* NOTE */
+.note {
+  background: #fff8dc;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* CHAT */
+.chat-box {
+  margin-top: 20px;
+}
+
+.chat-box input {
+  margin-bottom: 10px;
+}
+
+.chat-reply {
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* RESULT GRID */
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.result-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.result-card h2 {
+  margin: 5px 0;
+}
+
+.result-card.green {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#scoreFill {
+  height: 100%;
+  width: 0%;
+
+
+  background: #22c55e;
+  transition: 0.5s;
+}
+
+/* FIX TEXT OVERFLOW */
+.result-card h2 {
+  font-size: 18px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* PREVENT COLLISION */
+.result-card {
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* RESPONSIVE GRID */
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* MOBILE SAFE */
+@media (max-width: 768px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+}
